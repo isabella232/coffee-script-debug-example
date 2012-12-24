@@ -1,6 +1,6 @@
 == This application shows how to debug CoffeeScript code in Rails application with RubyMine
 
-Run Rails application in environment "developers" open http://localhost:3000/ and follow instuction
+Open the project in RubyMine. Run Rails application in environment "developers". Open localhost:3000 and follow instuction
 
 (c) JetBrains
 
