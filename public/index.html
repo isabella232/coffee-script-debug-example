@@ -1,0 +1,96 @@
+<!--suppress HtmlUnknownTarget -->
+<html>
+<head>
+    <link href="assets/debugging_example.css" type="text/css" rel="stylesheet"/>
+    <link href="assets/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/debugging_example.js"></script>
+</head>
+<body>
+
+<div class="container-narrow">
+    <div class="masthead without-margin-top">
+        <h2>How to debug CoffeeScript code of this project</h2>
+    </div>
+
+    <div class="row-fluid">
+        <h4 class="without-margin-top">1. Install JetBrains Chrome Extension</h4>
+        There is jb.crx file in the root directory of this application, open Chrome's settings, select "Extension" pane and drag and drop
+        jb.crx from file explorer to chrome. Then turn on the checkbox "Allow access to file URLs" and restart the extension (by disabling it and enabling it back).
+    </div>
+
+    <div class="row-fluid">
+        <h4>2. Connect to Chrome</h4>
+        From Run Configuration list select "CoffeeScript Debug" and start it. RubyMine connects to Chrome, opens page to
+        debug and Chrome should confirm it with yellow bar with text "JetBrains Chrome Extension is debugging this tab."
+        on the top of the page.
+    </div>
+
+    <div class="row-fluid">
+        <h4>3. Set breakpoint and fire the event</h4>
+        Open file debugging_example.js.coffee put breakpoint in the body of method "onButtonClick" and press the big
+        green button on the page. Execution of CoffeeScript code should stop where breakpoint is located.
+    </div>
+
+    <div class="row-fluid">
+        <div class="span4 offset4">
+            <button id="button" class="bigbutton btn btn-success btn-large">Press me to fire event for debugging
+            </button>
+        </div>
+    </div>
+
+
+    <div class="masthead">
+        <h2>How to debug CoffeeScript code of your application</h2>
+    </div>
+
+    <div class="row-fluid without-margin-top">
+        <h4>1. Make sure that JetBrains Chrome Extension is installed</h4>
+        Download file jb.crx <a href="">here</a>, open Chrome's settings, select "Extension" pane and drag and drop
+        downloaded cbx from file explorer to chrome. Then check the "Allow access to file URLs" checkbox.
+    </div>
+
+
+    <div class="row-fluid">
+        <div class="span12">
+            <h4>2. Turn on source-maps generation</h4>
+            In Gemfile add lines:
+        <pre>gem "coffee-script-redux", :git => "git://github.com/netzpirat/ruby-coffee-script-redux.git"
+gem "coffee-script-redux-debugger", :path => "~/Projects/GitHub/coffee-script-redux-debugger"</pre>
+        </div>
+
+
+        <div class="row-fluid">
+            <h4>3. Create JavaScript Remote Debug run configuration</h4>
+            <p>
+                Open run configurations dialog. Select JavaScript Remote Debug.
+                <img src="assets/CreateCoffeeScriptDebugRunConfiguration.png"/>
+            </p>
+            <p>
+            <ul>
+                <li>Specify URL of the page you are going to debug.</li>
+                <li>Change browser to "Chrome"</li>
+                <li>Provide mapping to assets directory.</li>
+            </ul>
+
+
+            <img src="assets/EditCoffeeScriptDebugRunConfiguration.png"/>
+            </p>
+        </div>
+
+        <div class="row-fluid">
+            <h4>3. Connect to Chrome</h4>
+            Start Run Configuration you have just created and make sure that there is yellow bar with text "JetBrains Chrome Extension is debugging this tab."
+            on the top of the page you are debugging.
+        </div>
+
+        <div class="row-fluid">
+            <h4>4. Set breakpoint and fire the event</h4>
+            Open CoffeeScript file and put breakpoint
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
