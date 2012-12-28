@@ -1,17 +1,10 @@
-GIT
-  remote: git://github.com/avokin/coffee-script-redux-debugger
-  revision: 514ba03a0df77a78728de57665bd51b83151dfdc
+PATH
+  remote: ~/Projects/GitHub/coffee-script-redux-debugger
   specs:
     coffee-script-redux-debugger (0.0.1)
-      sprockets
-
-GIT
-  remote: git://github.com/netzpirat/ruby-coffee-script-redux.git
-  revision: fdc97d034471399e414a0d03c588e5c3f8ff6afb
-  specs:
-    coffee-script-redux (0.0.1)
       coffee-script
       execjs
+      sprockets
 
 GEM
   remote: https://rubygems.org/
@@ -120,7 +113,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  coffee-script-redux!
   coffee-script-redux-debugger!
   jquery-rails
   rails (= 3.2.9)
