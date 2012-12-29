@@ -12,5 +12,5 @@ end
 gem 'jquery-rails'
 
 group :development do
-  gem "coffee-script-redux-debugger", :path => "~/Projects/GitHub/coffee-script-redux-debugger"
+  gem "coffee-script-redux-debugger", :git => "git://github.com/avokin/coffee-script-redux-debugger.git"
 end
