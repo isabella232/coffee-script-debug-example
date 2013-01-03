@@ -1,5 +1,5 @@
 <!--suppress HtmlUnknownTarget -->
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <link href="assets/debugging_example.css" type="text/css" rel="stylesheet"/>
     <link href="assets/bootstrap.css" type="text/css" rel="stylesheet"/>
@@ -42,54 +42,7 @@
 
 
     <div class="masthead">
-        <h2>How to debug CoffeeScript code of your application</h2>
-    </div>
-
-    <div class="row-fluid without-margin-top">
-        <h4>1. Make sure that JetBrains Chrome Extension is installed</h4>
-        Download file jb.crx <a href="">here</a>, open Chrome's settings, select "Extension" pane and drag and drop
-        downloaded cbx from file explorer to chrome. Then check the "Allow access to file URLs" checkbox.
-    </div>
-
-
-    <div class="row-fluid">
-        <div class="span12">
-            <h4>2. Turn on source-maps generation</h4>
-            In Gemfile add lines:
-        <pre>gem "coffee-script-redux", :git => "git://github.com/netzpirat/ruby-coffee-script-redux.git"
-gem "coffee-script-redux-debugger", :path => "~/Projects/GitHub/coffee-script-redux-debugger"</pre>
-        </div>
-
-
-        <div class="row-fluid">
-            <h4>3. Create JavaScript Remote Debug run configuration</h4>
-            <p>
-                Open run configurations dialog. Select JavaScript Remote Debug.
-                <img src="assets/CreateCoffeeScriptDebugRunConfiguration.png"/>
-            </p>
-            <p>
-            <ul>
-                <li>Specify URL of the page you are going to debug.</li>
-                <li>Change browser to "Chrome"</li>
-                <li>Provide mapping to assets directory.</li>
-            </ul>
-
-
-            <img src="assets/EditCoffeeScriptDebugRunConfiguration.png"/>
-            </p>
-        </div>
-
-        <div class="row-fluid">
-            <h4>3. Connect to Chrome</h4>
-            Start Run Configuration you have just created and make sure that there is yellow bar with text "JetBrains Chrome Extension is debugging this tab."
-            on the top of the page you are debugging.
-        </div>
-
-        <div class="row-fluid">
-            <h4>4. Set breakpoint and fire the event</h4>
-            Open CoffeeScript file and put breakpoint
-        </div>
-
+        <h2><a href="http://confluence.jetbrains.net/display/RUBYDEV/Debugging+CoffeeScript+Code">Here you can see how to debug CoffeeScript code of your application</a></h2>
     </div>
 </div>
 </body>
